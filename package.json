@@ -1,0 +1,19 @@
+{
+  "name": "@chris-zhu/utils",
+  "version": "0.0.1",
+  "description": "A some utils fns",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chris-zhu/utils.git"
+  },
+  "author": "@chris-zhu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chris-zhu/utils/issues"
+  },
+  "homepage": "https://github.com/chris-zhu/utils#readme"
+}
