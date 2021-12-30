@@ -1,6 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@antfu/ni': ^0.12.0
   '@chris-zhu/eslint-config': ^0.0.3
   '@types/node': ^17.0.5
   bumpp: ^7.1.1
@@ -16,6 +17,7 @@ specifiers:
   zx: ^4.2.0
 
 devDependencies:
+  '@antfu/ni': 0.12.0
   '@chris-zhu/eslint-config': 0.0.3_eslint@8.5.0+typescript@4.5.4
   '@types/node': 17.0.5
   bumpp: 7.1.1
@@ -31,6 +33,11 @@ devDependencies:
   zx: 4.2.0
 
 packages:
+
+  /@antfu/ni/0.12.0:
+    resolution: {integrity: sha512-f+uqWBuXoShLpLSaQKHeFUnoUdvMGx8xcXrtyfxK95RGx5guKJVo3kVb2JtLNWkzwYzQvtQ+q0hU9YwSDSTVSw==}
+    hasBin: true
+    dev: true
 
   /@babel/code-frame/7.16.0:
     resolution: {integrity: sha512-IF4EOMEV+bfYwOmNxGzSnjR2EmQod7f1UXOpZM3l4i4o4QNwzjtJAu/HxdjHq0aYBvdqMuQEY1eg0nqW9ZPORA==}

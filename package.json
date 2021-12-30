@@ -9,10 +9,10 @@
   "license": "MIT",
   "scripts": {
     "start": "esno src/index.ts",
-    "dev": "pnpm run build -- --watch",
+    "dev": "nr build -- --watch",
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "lint": "eslint \"{src,test}/**/*.ts\"",
-    "lint:fix": "pnpm run lint -- --fix",
+    "lint:fix": "nr lint -- --fix",
     "test": "vitest",
     "release": "zx scripts/release.mjs",
     "removeTag": "zx scripts/removeTag.mjs"
@@ -32,6 +32,7 @@
   },
   "homepage": "https://github.com/chris-zhu/utils#readme",
   "devDependencies": {
+    "@antfu/ni": "^0.12.0",
     "@chris-zhu/eslint-config": "^0.0.3",
     "@types/node": "^17.0.5",
     "bumpp": "^7.1.1",
