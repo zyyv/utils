@@ -1,2 +1,2 @@
-var a = 1
-console.log(a)
+export * from './array'
+export * from './object'
