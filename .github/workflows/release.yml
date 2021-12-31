@@ -24,3 +24,6 @@ jobs:
         with:
           node-version: '14'
           registry-url: https://registry.npmjs.org/
+      
+      - name: releasing
+        env: CONVENTIONAL_GITHUB_RELEASER_TOKEN: ${{secrets.GH_TOKEN}}
