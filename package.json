@@ -11,9 +11,10 @@
     "start": "esno src/index.ts",
     "dev": "nr build -- --watch",
     "build": "tsup src/index.ts --format cjs,esm --dts",
-    "lint": "eslint \"{src,test}/**/*.ts\"",
-    "lint:fix": "nr lint -- --fix",
+    "lint": "eslint \"{src,test,scripts}/**/{*.ts,*.mjs}\"",
+    "lint:fix": "npm run lint -- --fix",
     "test": "vitest",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "release": "zx scripts/release.mjs",
     "removeTag": "zx scripts/removeTag.mjs"
   },

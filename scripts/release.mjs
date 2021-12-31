@@ -4,12 +4,12 @@ import fs from 'fs-extra'
 import { $ } from 'zx'
 
 execSync('pnpm exec bumpp package.json', {
-  stdio: 'inherit'
+  stdio: 'inherit',
 })
 
 await $`pnpm changelog`
 
-await $`pnpm -r publish --access public --no-git-checks`
+// await $`pnpm -r publish --access public --no-git-checks`
 
 const { version } = await fs.readJSON('package.json')
 
