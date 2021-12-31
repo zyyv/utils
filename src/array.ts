@@ -1,4 +1,4 @@
-import type { Arrayable, Nullable } from "./types"
+import type { Arrayable, Nullable } from './types'
 
 /**
  * Convert `Arrayable<T>` to `Array<T>`
@@ -6,8 +6,8 @@ import type { Arrayable, Nullable } from "./types"
  * @category Array
  */
 export function toArray<T>(array?: Nullable<Arrayable<T>>): Array<T> {
-    array = array || []
-    if (Array.isArray(array))
-        return array
-    return [array]
+  array = array || []
+  if (Array.isArray(array))
+    return array
+  return [array]
 }
