@@ -1,5 +1,5 @@
 /**
- * Convert `Arrayable<T>` to `Array<T>`
+ * Convert `Objectable<T>` to `Object<T>`
  *
  * @category Object
  */
@@ -14,3 +14,5 @@ export function deepClone(target: any): any {
 
   return target
 }
+
+export const extend = Object.assign
