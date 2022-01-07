@@ -1,4 +1,4 @@
-name: Test
+name: CI
 
 on:
   push:
@@ -21,22 +21,28 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        with:
+            fetch-depth: 0
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.24.1
 
       - name: use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-      
-      - name: Setup
-        run: npm i -g pnpm @antfu/ni
+          registry-url: https://registry.npmjs.org/
+          cache: 'pnpm'
       
       - name: Install
-        run: nci
+        run: pnpm i
 
       - name: Lint
-        run: nr lint --if-present
+        run: pnpm run lint --if-present
 
       - name: Test
-        run: nr test --if-present
+        run: pnpm run test --if-present
         
 

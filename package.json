@@ -1,7 +1,7 @@
 {
   "name": "@chris-zhu/utils",
   "version": "0.0.2",
-  "description": "A some common utils fns",
+  "description": "Some common utils fns just you need",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
