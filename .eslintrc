@@ -1,6 +1,3 @@
 {
-  "extends": "@chris-zhu",
-  "rules": {
-    "no-restricted-syntax": "off"
-  }
+  "extends": "@chris-zhu"
 }
