@@ -1,33 +1,48 @@
-import { isDate, isObject, isRegExp } from '../is'
+import { isArray, isDate, isObject, isRegExp } from '../is'
 
 /**
- * Convert `Objectable<T>` to `Object<T>`
- *
- * @category Object
+ * A simple deep clone method
+ * 一个普通的深度克隆函数
+ * @param origin any complex type of object
+ * @returns a deep clone object
  */
-export function deepClone(source: any, hash = new WeakMap()): any {
-  if (!source) return source
+export function deepClone(origin: unknown): unknown {
+  if (isArray(origin)) return origin.map(child => deepClone(child))
 
-  if (hash.has(source)) return hash.get(source) // 新增代码，查哈希表
+  if (isObject(origin)) {
+    return Object.fromEntries(
+      Object.entries(origin).map(([k, v]) => [k, deepClone(v)]),
+    )
+  }
 
-  const target: {
-    [key: string]: any
-  } = Array.isArray(source) ? [] : {}
+  return origin
+}
 
-  hash.set(source, target)
-  Object.entries(source).forEach(([key, v]: [string, any]) => {
-    if (Object.prototype.hasOwnProperty.call(source, key)) {
+/**
+ * A deep clone method to ensure that circular references are avoided.
+ * 一个深度克隆方法来保证避免循环引用
+ * @param origin any complex type of object
+ * @param hash hashMap
+ * @returns a deep clone object
+ */
+export function deepClone2(origin: any, hash = new WeakMap()): any {
+  if (isObject(origin)) {
+    if (hash.has(origin)) return hash.get(origin)
+
+    const target: any = isArray(origin) ? [] : {}
+    hash.set(origin, target)
+
+    Object.entries(origin).forEach(([k, v]: [string, any]) => {
       if (isRegExp(v))
-        target[key] = new RegExp(v)
+        target[k] = new RegExp(v)
       else if (isDate(v))
-        target[key] = new Date(v)
-      else if (isObject(v))
-        target[key] = deepClone(v, hash)
+        target[k] = new Date(v)
       else
-        target[key] = v
-    }
-  })
-  return target
+        target[k] = deepClone2(v, hash)
+    })
+    return target
+  }
+  return origin
 }
 
 export const extend = Object.assign
