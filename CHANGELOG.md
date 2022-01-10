@@ -1,3 +1,18 @@
+## [0.0.3](https://github.com/chris-zhu/utils/compare/v0.0.2...v0.0.3) (2022-01-10)
+
+
+### Bug Fixes
+
+* deepClone methods ([60751cd](https://github.com/chris-zhu/utils/commit/60751cd6ce1c6c92666e7182834b1b740bf94ccd))
+* import path error ([244f004](https://github.com/chris-zhu/utils/commit/244f0043ccdf5595d8af1d5b608bc6b20165818f))
+
+
+### Features
+
+* add `is` utils ([4417be9](https://github.com/chris-zhu/utils/commit/4417be952b216719fdd2a07ceb8509c94b2710ab))
+
+
+
 ## [0.0.2](https://github.com/chris-zhu/utils/compare/v0.0.1...v0.0.2) (2021-12-31)
 
 
