@@ -6,45 +6,16 @@ on:
       - "v*"
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v2
-        with:
-          node-version: "14"
-
-      - name: Setup
-        run: npm i -g pnpm @antfu/ni
-      
-      - name: Install
-        run: nci
-
-      - name: Lint
-        run: nr lint --if-present
-
-      - name: Test
-        run: nr test --if-present
-      
-      - name: build
-        run: nr build
-
   release:
-    needs: build
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
       - uses: actions/setup-node@v2
         with:
-          node-version: "14"
+          node-version: '14'
           registry-url: https://registry.npmjs.org/
-
-      - name: publish
-        run: npm publish --access public
+      - run: npx conventional-github-releaser -p angular
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GH_TOKEN}}
+          CONVENTIONAL_GITHUB_RELEASER_TOKEN: ${{secrets.GH_TOKEN}}
