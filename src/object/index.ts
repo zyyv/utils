@@ -15,20 +15,18 @@ export function deepClone(source: any, hash = new WeakMap()): any {
   } = Array.isArray(source) ? [] : {}
 
   hash.set(source, target)
-
-  for (const key in source) {
+  Object.entries(source).forEach(([key, v]: [string, any]) => {
     if (Object.prototype.hasOwnProperty.call(source, key)) {
-      if (isRegExp(source[key]))
-        target[key] = new RegExp(source[key])
-      else if (isDate(source[key]))
-        target[key] = new Date(source[key])
-      else if (isObject(source[key]))
-        target[key] = deepClone(source[key], hash)
+      if (isRegExp(v))
+        target[key] = new RegExp(v)
+      else if (isDate(v))
+        target[key] = new Date(v)
+      else if (isObject(v))
+        target[key] = deepClone(v, hash)
       else
-        target[key] = source[key]
+        target[key] = v
     }
-  }
-
+  })
   return target
 }
 
