@@ -13,6 +13,7 @@ export const isMap = (val: unknown): val is Map<any, any> =>
 export const isSet = (val: unknown): val is Set<any> =>
   toTypeString(val) === '[object Set]'
 export const isDate = (val: unknown): val is Date => val instanceof Date
+export const isRegExp = (val: unknown): val is RegExp => val instanceof RegExp
 export const isSymbol = (val: unknown): val is symbol => typeof val === 'symbol'
 export const isPromise = <T = any>(val: unknown): val is Promise<T> => isObject(val) && isFunction(val.then) && isFunction(val.catch)
 export const isValue = (val: any): val is boolean => val !== undefined && val !== null
