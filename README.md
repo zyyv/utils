@@ -3,7 +3,7 @@
 <h1 align="center">@chris-zhu/utils</h1>
 
 <p align="center">
-A collection of some common and useful JavaScript / TypeScript utilities by [@chris-zhu](https://github.com/chris-zhu).
+Collection of common and useful JavaScript / TypeScript utilities by <a href="https://github.com/chris-zhu">@chris-zhu</a>.
 </p>
 
 <p align="center">
