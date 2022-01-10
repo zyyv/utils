@@ -1,6 +1,5 @@
-import { isDate, isRegExp } from 'util/types'
 import { expect, it } from 'vitest'
-import { isPromise } from '../src'
+import { isDate, isPromise, isRegExp } from '../src'
 
 it('is', () => {
   const p = new Promise(() => {})
