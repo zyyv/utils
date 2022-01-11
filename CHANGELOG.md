@@ -1,4 +1,13 @@
-## 0.0.4 (2022-01-10)
+## [0.0.5](https://github.com/chris-zhu/utils/compare/v0.0.4...v0.0.5) (2022-01-11)
+
+
+### Bug Fixes
+
+* update export ([ec34709](https://github.com/chris-zhu/utils/commit/ec34709582068db322f5b155e7ab6568031a4604))
+
+
+
+## [0.0.4](https://github.com/chris-zhu/utils/compare/7e3e04178ae9292a6d0aa1b97bcacd1079ce098b...v0.0.4) (2022-01-10)
 
 
 ### Bug Fixes
