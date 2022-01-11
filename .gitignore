@@ -70,6 +70,7 @@ typings/
 
 # Nuxt generate
 dist
+scripts
 
 # vuepress build output
 .vuepress/dist
@@ -79,3 +80,4 @@ dist
 
 # IDE
 .idea
+.vscode
