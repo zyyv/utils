@@ -7,7 +7,13 @@ Collection of common and useful JavaScript / TypeScript utilities by <a href="ht
 </p>
 
 <p align="center">
-<a href="https://www.npmjs.com/package/@chris-zhu/utils"><img src="https://img.shields.io/npm/v/@chris-zhu/utils?color=a1b858&label=" alt="NPM version"></a></p>
+  <a href="https://www.npmjs.com/package/@chris-zhu/utils">
+    <img src="https://img.shields.io/npm/v/@chris-zhu/utils?color=a1b858&label=" alt="NPM version">
+  </a>
+  <a href="https://www.paka.dev/npm/@chris-zhu/utils">
+    <img src="https://www.paka.dev/badges/v0/cute.svg" alt="NPM version">
+  </a>
+</p>
 
 
 ## Features
