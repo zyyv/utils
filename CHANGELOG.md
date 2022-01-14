@@ -1,3 +1,20 @@
+## [0.0.6](https://github.com/chris-zhu/utils/compare/v0.0.5...v0.0.6) (2022-01-14)
+
+
+### Bug Fixes
+
+* add is fn ([2437bd2](https://github.com/chris-zhu/utils/commit/2437bd254461833e855b3475af174eb0e5ad348a))
+* remove invalid file ([bd5d81f](https://github.com/chris-zhu/utils/commit/bd5d81f1430d72828504cff7cc89e28f480d4ea6))
+* update category ([19a512a](https://github.com/chris-zhu/utils/commit/19a512a8795cb954fb2e6e5162fb0658a1547cc7))
+* update gitignore ([a9fdf44](https://github.com/chris-zhu/utils/commit/a9fdf449729f660dad3d70822ec1af8b185d80e1))
+
+
+### Features
+
+* complete array ([7acf898](https://github.com/chris-zhu/utils/commit/7acf89844edc3713a1db10975bfe8d3f1037cef0))
+
+
+
 ## [0.0.5](https://github.com/chris-zhu/utils/compare/v0.0.4...v0.0.5) (2022-01-11)
 
 
