@@ -1,5 +1,5 @@
 import { expect, it } from 'vitest'
-import { deepClone, deepClone2 } from '../src'
+import { deepClone, deepClone2 } from '@utils/object'
 
 it('Object', () => {
   const deepCloneTests = [

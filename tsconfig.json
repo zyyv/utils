@@ -7,6 +7,15 @@
     "esModuleInterop": true,
     "strict": true,
     "strictNullChecks": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "paths": {
+      "@utils": ["./src/index.ts"],
+      "@utils/array": ["./src/array/index.ts"],
+      "@utils/base": ["./src/base/index.ts"],
+      "@utils/date": ["./src/date/index.ts"],
+      "@utils/function": ["./src/function/index.ts"],
+      "@utils/is": ["./src/is/index.ts"],
+      "@utils/object": ["./src/object/index.ts"],
+    }
   }
 }
