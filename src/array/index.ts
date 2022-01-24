@@ -104,3 +104,29 @@ export function move<T>(arr: T[], from: number, to: number) {
   arr.splice(to, 0, arr.splice(from, 1)[0])
   return arr
 }
+
+/**
+ * Generate tree structure according to link
+ * 根据link生成树结构
+ *
+ * @category Array
+ * @param items Array
+ * @param id number | null
+ * @param link string
+ */
+export function nest(items: any[], id: number | null = null, link = 'parent_id'): any[] {
+  return items
+    .filter(item => item[link] === id)
+    .map(item => ({ ...item, children: nest(items, item.id) }))
+}
+
+/**
+ * averaging
+ * 求平均数
+ * @category Array
+ * @param nums number[]
+ * @returns number
+ */
+export function average(...nums: number[]): number {
+  return nums.reduce((acc, val) => acc + val, 0) / nums.length
+}
