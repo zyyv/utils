@@ -15,5 +15,6 @@ export const toTypeString = (v: any) => Object.prototype.toString.call(v)
  * @param min number
  * @param max number
  * @returns number
+ * @category Base
  */
 export const getRandom = (min: number, max: number) => Math.floor(Math.random() * max + min)
