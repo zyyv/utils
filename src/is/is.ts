@@ -1,9 +1,4 @@
 import { toTypeString } from '../base'
-const hasOwnProperty = Object.prototype.hasOwnProperty
-export const hasOwn = (
-  val: object,
-  key: string | symbol,
-): key is keyof typeof val => hasOwnProperty.call(val, key)
 
 export const isDef = <T = any>(val?: T): val is T => typeof val !== 'undefined'
 export const isBoolean = (val: any): val is boolean => typeof val === 'boolean'
@@ -26,8 +21,3 @@ export const isPromise = <T = any>(val: unknown): val is Promise<T> => isObject(
 export const isValue = (val: any): val is boolean => val !== undefined && val !== null
 
 export const NO = () => false
-
-export const toNumber = (val: any): any => {
-  const n = parseFloat(val)
-  return isNaN(n) ? val : n
-}

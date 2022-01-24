@@ -56,3 +56,18 @@ export function deepClone2(origin: any, hash = new WeakMap()): any {
  * @category Object
  */
 export const extend = Object.assign
+
+const hasOwnProperty = Object.prototype.hasOwnProperty
+/**
+ * Object.prototype.hasOwnProperty
+ * @param val an obj
+ * @param key key
+ * @returns
+ */
+export const hasOwn = (
+  val: object,
+  key: string | symbol,
+): key is keyof typeof val => {
+  if (val == null) return false
+  return hasOwnProperty.call(val, key)
+}
