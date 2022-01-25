@@ -1,5 +1,5 @@
 import { expect, it } from 'vitest'
-import { average, nest, range, toArray } from '@utils/array'
+import { average, nest, range, shuffle, toArray } from '@utils/array'
 
 it('toArray', () => {
   expect(toArray([0])).toEqual([0])
@@ -48,4 +48,9 @@ it('nest', () => {
 it('average', () => {
   expect(average(1, 2, 3, 4)).toEqual(2.5)
   expect(average(...[2, 3, 4])).toEqual(3)
+})
+
+it('shuffle', () => {
+  expect(shuffle([1, 2, 3])).toHaveLength(3)
+  expect(shuffle([{ a: 1 }, { b: 2 }, { c: 3 }])).toHaveLength(3)
 })
