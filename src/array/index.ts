@@ -130,3 +130,18 @@ export function nest(items: any[], id: number | null = null, link = 'parent_id')
 export function average(...nums: number[]): number {
   return nums.reduce((acc, val) => acc + val, 0) / nums.length
 }
+
+/**
+ * Randomly sorts the elements of an array using the Fisher-Yates algorithm.
+ * 使用Fisher-Yates算法随机排序数组的元素。
+ * @param arr T
+ * @returns T
+ */
+export function shuffle<T extends any[]>(arr: T): T {
+  let m = arr.length
+  while (m) {
+    const i = Math.floor(Math.random() * m--) as number
+    [arr[m], arr[i]] = [arr[i], arr[m]]
+  }
+  return arr
+}
