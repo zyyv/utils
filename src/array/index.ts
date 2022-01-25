@@ -134,6 +134,7 @@ export function average(...nums: number[]): number {
 /**
  * Randomly sorts the elements of an array using the Fisher-Yates algorithm.
  * 使用Fisher-Yates算法随机排序数组的元素。
+ * @category Array
  * @param arr T
  * @returns T
  */
