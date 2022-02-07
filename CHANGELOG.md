@@ -1,3 +1,16 @@
+## [0.0.7](https://github.com/chris-zhu/utils/compare/v0.0.6...v0.0.7) (2022-02-07)
+
+
+### Features
+
+* add PubSub ([66eb7c8](https://github.com/chris-zhu/utils/commit/66eb7c8082778e9607ab662c00a677606d21150c))
+* add shuffle and once ([c724a06](https://github.com/chris-zhu/utils/commit/c724a06d2d69cd121b4727c66b658e1df7028524))
+* add vitest config ([e3f8fc0](https://github.com/chris-zhu/utils/commit/e3f8fc0df779ced4fe2095ab37d986143b373721))
+* add-nest-average-getRandom-function ([37d9109](https://github.com/chris-zhu/utils/commit/37d91090263104733ee8a91efdbea8c34124b69f))
+* Date utils ([dee2ee4](https://github.com/chris-zhu/utils/commit/dee2ee438d0af9858062795820508b090eb90476))
+
+
+
 ## [0.0.6](https://github.com/chris-zhu/utils/compare/v0.0.5...v0.0.6) (2022-01-14)
 
 
