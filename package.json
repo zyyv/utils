@@ -33,7 +33,7 @@
   },
   "homepage": "https://github.com/chris-zhu/utils#readme",
   "devDependencies": {
-    "@antfu/ni": "^0.12.0",
+    "@antfu/ni": "^0.13.0",
     "@chris-zhu/eslint-config": "latest",
     "@types/node": "^17.0.5",
     "bumpp": "^7.1.1",
