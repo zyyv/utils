@@ -10,31 +10,20 @@ on:
       - main
 
 jobs:
-  build:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        node-version: [14.x, 16.x]
-        os: [ubuntu-latest, windows-latest, macos-latest]
-      fail-fast: false
-
+  test:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
 
       - name: Install pnpm
         uses: pnpm/action-setup@v2.0.1
         with:
-          version: 6.24.1
+          version: 6.32.3
 
-      - name: use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+      - uses: actions/setup-node@v2
         with:
-          node-version: ${{ matrix.node-version }}
-          registry-url: https://registry.npmjs.org/
-          cache: pnpm
+          node-version: '16'
+          cache: 'pnpm'
 
       - name: Install
         run: pnpm i
