@@ -1,3 +1,6 @@
 {
-  "extends": "@chris-zhu"
+  "extends": "@chris-zhu",
+  "rules": {
+    "@typescript-eslint/ban-ts-comment": "off"
+  }
 }

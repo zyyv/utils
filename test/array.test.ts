@@ -46,8 +46,8 @@ it('nest', () => {
 })
 
 it('average', () => {
-  expect(average(1, 2, 3, 4)).toEqual(2.5)
-  expect(average(...[2, 3, 4])).toEqual(3)
+  expect(average(1, 2, 3, 4)).toBe(2.5)
+  expect(average(...[2, 3, 4])).toBe(3)
 })
 
 it('shuffle', () => {

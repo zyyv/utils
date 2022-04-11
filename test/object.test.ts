@@ -1,7 +1,7 @@
 import { expect, it } from 'vitest'
 import { deepClone, deepClone2 } from '@utils/object'
 
-it('Object', () => {
+it('object', () => {
   const deepCloneTests = [
     {
       target: 'normal',

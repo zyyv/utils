@@ -9,7 +9,8 @@ import { toTypeString } from '../base'
  *
  * @category Is
  */
-// @ts-ignore
+
+// @ts-expect-error
 export const isWindow = (v: any): boolean => typeof window !== 'undefined' && toTypeString(v) === '[object Window]'
 
 /**
@@ -19,7 +20,8 @@ export const isWindow = (v: any): boolean => typeof window !== 'undefined' && to
  *
  * @category Is
  */
-// @ts-ignore
+
+// @ts-expect-error
 export const inBrowser = typeof window !== 'undefined'
 
 /**
@@ -29,7 +31,8 @@ export const inBrowser = typeof window !== 'undefined'
  *
  * @category Is
  */
-// @ts-ignore
+
+// @ts-expect-error
 export const isWechatBrowser = (): boolean => (navigator?.userAgent.toLowerCase() as string).includes('micromessenger')
 
 /**
@@ -37,7 +40,7 @@ export const isWechatBrowser = (): boolean => (navigator?.userAgent.toLowerCase(
  *
  * @category Is
  */
-// @ts-ignore
+// @ts-expect-error
 export const UA = inBrowser && window.navigator.userAgent.toLowerCase()
 /**
  * isIE

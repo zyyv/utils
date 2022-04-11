@@ -30,12 +30,10 @@ export function once(fn: (...args: any) => void): Function {
  */
 export class Pubsub<Topics extends string> {
   // 可以广播的主题存储
-  private _topics: {
-    [key: string]: {
-      token: number
-      func: Function
-    }[]
-  } = {}
+  private _topics: Record<string, {
+    token: number
+    func: Function
+  }[]> = {}
 
   // 标识符，每一个订阅者唯一token
   private subId = -1

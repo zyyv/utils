@@ -3,7 +3,7 @@ import { isDate, isPromise, isRegExp } from '@utils/is'
 
 it('is', () => {
   const p = new Promise(() => {})
-  expect(isPromise(p)).toBeTruthy()
-  expect(isRegExp(/123/g)).toBeTruthy()
+  expect(isPromise(p)).toBe(true)
+  expect(isRegExp(/123/g)).toBe(true)
   expect(isDate(new Date())).toBe(true)
 })
