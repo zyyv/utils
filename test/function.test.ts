@@ -1,5 +1,5 @@
-import { once } from '@utils/function'
 import { describe, expect, it } from 'vitest'
+import { once } from '@/function'
 
 describe('function test', () => {
   it('once', () => {

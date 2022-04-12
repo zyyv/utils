@@ -6,6 +6,13 @@
 export const noop = () => {}
 
 /**
+ * no 永远返回false
+ *
+ * @category Function
+ */
+export const NO = () => false
+
+/**
  * A function that is called only once
  * 只调用一次的函数
  * @category Function

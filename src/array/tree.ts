@@ -1,5 +1,5 @@
-import { isValue } from '@utils/is'
-import type { Nullable } from '../types'
+import { isValue } from '@/is'
+import type { Nullable } from '@/types'
 
 /**
  * Generate tree structure according by prop

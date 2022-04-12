@@ -1,5 +1,5 @@
-import { isArray } from '../is/is'
-import type { Arrayable, Nullable } from '../types'
+import { isArray } from '@/is'
+import type { Arrayable, Nullable } from '@/types'
 
 /**
  * Convert `Arrayable<T>` to `Array<T>`
@@ -15,21 +15,21 @@ export function toArray<T>(array?: Nullable<Arrayable<T>>): Array<T> {
 }
 
 /**
-   * Unique an Array
-   * 转换为一个独一无二的数组
-   *
-   * @category Array
-   */
+ * Unique an Array
+ * 转换为一个独一无二的数组
+ *
+ * @category Array
+ */
 export function uniq<T>(array: readonly T[]): T[] {
   return Array.from(new Set(array))
 }
 
 /**
-   * Get nth item of Array. Negative for backward
-   * 获取数组的第n个元素，负数表示倒数
-   *
-   * @category Array
-   */
+ * Get nth item of Array. Negative for backward
+ * 获取数组的第n个元素，负数表示倒数
+ *
+ * @category Array
+ */
 export function at(array: readonly [], index: number): undefined
 export function at<T>(array: readonly T[], index: number): T
 export function at<T>(array: readonly T[] | [], index: number): T | undefined {
@@ -44,10 +44,10 @@ export function at<T>(array: readonly T[] | [], index: number): T | undefined {
 }
 
 /**
-   * Get last item
-   * 获取最后一个元素
-   * @category Array
-   */
+ * Get last item
+ * 获取最后一个元素
+ * @category Array
+ */
 export function last(array: readonly []): undefined
 export function last<T>(array: readonly T[]): T
 export function last<T>(array: readonly T[]): T | undefined {
@@ -71,10 +71,10 @@ export function remove<T>(array: T[], value: T) {
 }
 
 /**
-   * Genrate a range array of numbers. The `stop` is exclusive.
-   * 生成一个范围数组，包含起始值，但不包含结束值
-   * @category Array
-   */
+ * Genrate a range array of numbers. The `stop` is exclusive.
+ * 生成一个范围数组，包含起始值，但不包含结束值
+ * @category Array
+ */
 export function range(stop: number): number[]
 export function range(start: number, stop: number, step?: number): number[]
 export function range(...args: any): number[] {
@@ -121,11 +121,11 @@ export function average(...arr: number[]): number {
 }
 
 /**
-   * Randomly sorts the elements of an array using the Fisher-Yates algorithm.
-   * 随机排序数组
-   *
-   * @category Array
-   */
+ * Randomly sorts the elements of an array using the Fisher-Yates algorithm.
+ * 随机排序数组
+ *
+ * @category Array
+ */
 export function shuffle<T extends any[]>(arr: T): T {
   let m = arr.length
   while (m) {

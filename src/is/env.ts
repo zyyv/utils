@@ -1,4 +1,4 @@
-import { toTypeString } from '../base'
+import { toTypeString } from '@/shared'
 
 /**
  * Check is window

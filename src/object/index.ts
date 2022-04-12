@@ -60,9 +60,7 @@ export const extend = Object.assign
 const hasOwnProperty = Object.prototype.hasOwnProperty
 /**
  * Object.prototype.hasOwnProperty
- * @param val an obj
- * @param key key
- * @returns
+ * @category Object
  */
 export const hasOwn = (
   val: object,
