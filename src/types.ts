@@ -22,3 +22,5 @@ export type Fn<T = void> = () => T
   * Constructor
   */
 export type Constructor<T = void> = new (...args: any[]) => T
+
+export type DeepPartial<T> = { [P in keyof T]?: DeepPartial<T[P]> }

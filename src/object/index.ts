@@ -1,4 +1,5 @@
 import { isArray, isDate, isObject, isRegExp } from '../is'
+import type { DeepPartial } from '@/types'
 
 /**
  * A simple deep clone method
@@ -68,4 +69,37 @@ export const hasOwn = (
 ): key is keyof typeof val => {
   if (val == null) return false
   return hasOwnProperty.call(val, key)
+}
+
+/** 
+ * Deep merge two objects
+ * 深度合并两个对象
+ * 
+ * @category Object
+ * @returns merged object
+ */
+export function deepMerge<T>(original: T, patch: DeepPartial<T>): T {
+  const o = original as any
+  const p = patch as any
+
+  if (isArray(o) && isArray(p))
+    return [...o, ...p] as any
+
+  if (isArray(o))
+    return [...o] as any
+
+  const output = { ...o }
+  if (isObject(o) && isObject(p)) {
+    Object.keys(p).forEach((key) => {
+      if (isObject(p[key])) {
+        if (!(key in o))
+          Object.assign(output, { [key]: p[key] })
+        else
+          output[key] = deepMerge(o[key], p[key])
+      } else {
+        Object.assign(output, { [key]: p[key] })
+      }
+    })
+  }
+  return output
 }
