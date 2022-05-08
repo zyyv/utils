@@ -17,8 +17,8 @@ Collection of common and useful JavaScript / TypeScript utilities by <a href="ht
 
 
 ## Features
-- Tree-shakable ESM
-- Fully typed - with TSDocs
+- 🚀 Tree-shakable ESM
+- 😊 Fully typed - with TSDocs
 
 
 ## Project Activity
