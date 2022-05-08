@@ -13,4 +13,3 @@ export const isLeapYear = (y: number) => (y % 4 === 0 && y % 100 !== 0) || y % 4
  * @category Date
  */
 export const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms))
-

@@ -71,10 +71,10 @@ export const hasOwn = (
   return hasOwnProperty.call(val, key)
 }
 
-/** 
+/**
  * Deep merge two objects
  * 深度合并两个对象
- * 
+ *
  * @category Object
  * @returns merged object
  */
