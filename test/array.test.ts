@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { average, nest, range, shuffle, toArray } from '@/array'
-import { nest as nestData } from './array.targets'
+import { nest as nestData } from './targets/array'
 
 describe('test Array utils', () => {
   it('toArray', () => {
