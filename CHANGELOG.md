@@ -1,3 +1,29 @@
+## [0.0.13](https://github.com/chris-zhu/utils/compare/v0.0.12...v0.0.13) (2022-05-11)
+
+
+### Features
+
+* add format number fns ([a7945e9](https://github.com/chris-zhu/utils/commit/a7945e982ca07cd8d1613a98258eb5acd33392fd))
+
+
+
+## [0.0.12](https://github.com/chris-zhu/utils/compare/v0.0.11...v0.0.12) (2022-05-09)
+
+
+
+## [0.0.11](https://github.com/chris-zhu/utils/compare/v0.0.10...v0.0.11) (2022-05-09)
+
+
+
+## [0.0.10](https://github.com/chris-zhu/utils/compare/v0.0.9...v0.0.10) (2022-05-08)
+
+
+### Features
+
+* add object deepMerge ([f72e69e](https://github.com/chris-zhu/utils/commit/f72e69e4d89d18dd27429c63ca1ee0c46624201b))
+
+
+
 ## [0.0.9](https://github.com/chris-zhu/utils/compare/v0.0.8...v0.0.9) (2022-04-12)
 
 
