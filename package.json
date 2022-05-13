@@ -40,7 +40,7 @@
     "child_process": "^1.0.2",
     "conventional-changelog-cli": "^2.2.2",
     "eslint": "^8.15.0",
-    "esno": "^0.14.1",
+    "esno": "^0.15.0",
     "fs-extra": "^10.1.0",
     "rimraf": "^3.0.2",
     "tsup": "^5.12.7",
