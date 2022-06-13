@@ -34,3 +34,14 @@ export function formatNum(num: number, diget = 0, prefix?: string, suffix?: stri
 export function padZero(num: number, len = 2): string {
   return (Array(len).join('0') + num).slice(-len)
 }
+
+/**
+  * turn to Number
+  * @param val
+  * @returns number
+  * @category Number
+  */
+export const toNumber = (val: any): number => {
+  const n = parseFloat(val)
+  return isNaN(n) ? val : n
+}

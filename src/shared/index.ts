@@ -18,14 +18,3 @@ export const toTypeString = (v: any) => Object.prototype.toString.call(v)
   * @category Shared
   */
 export const getRandom = (min: number, max: number) => Math.floor(Math.random() * max + min)
-
-/**
-  * turn to Number
-  * @param val
-  * @returns number
-  * @category Shared
-  */
-export const toNumber = (val: any): number => {
-  const n = parseFloat(val)
-  return isNaN(n) ? val : n
-}
