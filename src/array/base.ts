@@ -1,5 +1,5 @@
-import { isArray } from '@/is'
-import type { Arrayable, Nullable } from '@/types'
+import { isArray } from '../is'
+import type { Arrayable, Nullable } from '../types'
 
 /**
  * Convert `Arrayable<T>` to `Array<T>`

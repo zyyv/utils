@@ -1,5 +1,5 @@
 import { isArray, isDate, isObject, isRegExp } from '../is'
-import type { DeepPartial } from '@/types'
+import type { DeepPartial } from '../types'
 
 /**
  * A simple deep clone method
