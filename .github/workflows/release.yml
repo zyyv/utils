@@ -23,10 +23,9 @@ jobs:
         with:
           node-version: 16.x
 
-      - run: npx conventional-github-releaser -p angular
-        continue-on-error: true
+      - run: npx changelogithub
         env:
-          CONVENTIONAL_GITHUB_RELEASER_TOKEN: ${{secrets.GH_TOKEN}}
+          GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
 
       - name: Install
         run: pnpm install
