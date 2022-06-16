@@ -8,7 +8,6 @@ describe('function test', () => {
     expect(onceFunc()).toBeUndefined()
   })
 
-  // eslint-disable-next-line jest/no-commented-out-tests
   // it.skip('pubSub', () => {
   //   const pubsub = new Pubsub()
   //   const m1 = pubsub.subscribe('message', (topic, args) => {
