@@ -1,8 +1,10 @@
 {
   "name": "@chris-zhu/utils",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "Collection of common and useful JavaScript / TypeScript utilities",
-  "keywords": [ "utils" ],
+  "keywords": [
+    "utils"
+  ],
   "license": "MIT",
   "author": "chris-zhu <https://github.com/chris-zhu>",
   "repository": {
