@@ -1,6 +1,7 @@
 {
   "extends": "@chris-zhu",
   "rules": {
-    "@typescript-eslint/ban-ts-comment": "off"
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/consistent-indexed-object-style": "off"
   }
 }
