@@ -134,3 +134,17 @@ export function shuffle<T extends any[]>(arr: T): T {
   }
   return arr
 }
+
+/**
+ * Split array into many arrays
+ * 将数组均分多个数组
+ *
+ * @category Array
+ */
+export function chunk<T>(arr: T[], size: number): T[][] {
+  const result: T[][] = []
+  for (let i = 0; i < arr.length; i += size)
+    result.push(arr.slice(i, i + size))
+
+  return result
+}

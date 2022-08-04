@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { average, nest, range, shuffle, toArray } from '@/array'
+import { average, chunk, nest, range, shuffle, toArray } from '@/array'
 import { nest as nestData } from './targets/array'
 
 describe('test Array utils', () => {
@@ -28,5 +28,9 @@ describe('test Array utils', () => {
   it('shuffle', () => {
     expect(shuffle([1, 2, 3])).toHaveLength(3)
     expect(shuffle([{ a: 1 }, { b: 2 }, { c: 3 }])).toHaveLength(3)
+  })
+
+  it('chunk', () => {
+    expect(chunk(range(10), 4)).toMatchSnapshot()
   })
 })
