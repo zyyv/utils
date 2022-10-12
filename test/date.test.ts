@@ -1,13 +1,13 @@
 import { describe, expect, test } from 'vitest'
-import { formatSeconds, formatTimestamp } from '@/date'
+import { formatSeconds } from '@/date'
 
 describe('date', () => {
-  test('formatTime', () => {
-    const timestamp = 1662096261943
+  // test('formatTime', () => {
+  //   const timestamp = 1662096261943
 
-    expect(formatTimestamp(timestamp)).toMatchInlineSnapshot('"2022-09-02 13:24:21"')
-    expect(formatTimestamp(timestamp, 'yyyy-MM-dd')).toMatchInlineSnapshot('"2022-09-02"')
-  })
+  //   expect(formatTimestamp(timestamp)).toMatchInlineSnapshot('"2022-09-02 13:24:21"')
+  //   expect(formatTimestamp(timestamp, 'yyyy-MM-dd')).toMatchInlineSnapshot('"2022-09-02"')
+  // })
 
   test('formatSeconds', () => {
     expect(formatSeconds(60)).toMatchInlineSnapshot('"00:01:00"')
