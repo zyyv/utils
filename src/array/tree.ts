@@ -25,3 +25,7 @@ export function nest(...args: any): any[] {
     .filter((i: any) => isValue(i[prop]) && i[prop] === id)
     .map((i: any) => ({ ...i, children: nest(arr, i.id) }))
 }
+
+export default {
+  nest,
+}

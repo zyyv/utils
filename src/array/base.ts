@@ -148,3 +148,21 @@ export function chunk<T>(arr: T[], size: number): T[][] {
 
   return result
 }
+
+/**
+ * Array Map
+ *
+ * @category Array
+ */
+export default {
+  toArray,
+  uniq,
+  at,
+  last,
+  remove,
+  range,
+  move,
+  average,
+  shuffle,
+  chunk,
+}

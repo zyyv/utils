@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest'
-import { deepClone, deepClone2, deepMerge } from '@/object'
+import { deepClone, deepClone2, deepMerge } from '@/object/base'
 
 describe('Object', () => {
   test('deepClone', () => {

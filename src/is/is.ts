@@ -1,4 +1,4 @@
-import { toTypeString } from '../shared'
+import { toTypeString } from '../shared/base'
 
 /**
  * @category Is
@@ -64,3 +64,28 @@ export const isPromise = <T = any>(val: unknown): val is Promise<T> => isObject(
  * @category Is
  */
 export const isValue = (val: any): val is boolean => val !== undefined && val !== null
+/**
+ * @category Is
+ */
+export const isEmpty = (val: any): val is boolean => {
+  return (!val || val === null || val === undefined || (Array.isArray(val) && Object.keys(val).length <= 0))
+}
+
+export default {
+  isDef,
+  isBoolean,
+  isFunction,
+  isNumber,
+  isString,
+  isObject,
+  isPlainObject,
+  isArray,
+  isMap,
+  isSet,
+  isDate,
+  isRegExp,
+  isSymbol,
+  isPromise,
+  isValue,
+  isEmpty,
+}

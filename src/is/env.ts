@@ -1,4 +1,4 @@
-import { toTypeString } from '../shared'
+import { toTypeString } from '../shared/base'
 
 /**
  * Check is window
@@ -78,3 +78,16 @@ export const isPhantomJS = UA && /phantomjs/.test(UA)
  * @category Is
  */
 export const isFF = UA && UA.match(/firefox\/(\d+)/)
+
+export default {
+  isWindow,
+  inBrowser,
+  isWechatBrowser,
+  UA,
+  isIE,
+  isIE9,
+  isEdge,
+  isChrome,
+  isPhantomJS,
+  isFF,
+}
