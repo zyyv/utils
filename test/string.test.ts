@@ -6,6 +6,6 @@ describe('string', () => {
     const id = randomStr(16)
 
     expect(id.length).toBe(16)
-    expect(id).toMatchInlineSnapshot('"x9PlK9YIUE8MTRYD"')
+    // expect(id).toMatchInlineSnapshot('"rkb9xsUlAeVUaeG3"')
   })
 })
