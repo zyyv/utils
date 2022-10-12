@@ -1,6 +1,6 @@
 {
   "name": "@chris-zhu/utils",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "Collection of common and useful JavaScript / TypeScript utilities",
   "keywords": [
     "utils"
