@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { randomStr } from '@/string/base'
+import { randomStr } from '../src'
 
 describe('string', () => {
   it('randomStr', () => {

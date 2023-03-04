@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest'
-import { settleAllPromise } from '@/promise'
+import { settleAllPromise } from '../src'
 
 describe('Promise', () => {
   const createPs = () => [

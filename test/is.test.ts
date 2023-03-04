@@ -1,5 +1,5 @@
 import { expect, it } from 'vitest'
-import { isDate, isPromise, isRegExp } from '@/is'
+import { isDate, isPromise, isRegExp } from '../src'
 
 it('is', () => {
   const p = new Promise(() => {})

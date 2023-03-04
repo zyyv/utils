@@ -3,16 +3,12 @@
     "target": "es2018",
     "module": "esnext",
     "lib": [
-      "esnext"
+      "esnext", "dom"
     ],
     "moduleResolution": "node",
     "esModuleInterop": true,
     "strict": true,
     "strictNullChecks": true,
     "resolveJsonModule": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"],
-    }
   }
 }

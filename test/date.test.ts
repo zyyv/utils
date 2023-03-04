@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest'
-import { formatSeconds } from '@/date'
+import { formatSeconds } from '../src'
 
 describe('date', () => {
   // test('formatTime', () => {

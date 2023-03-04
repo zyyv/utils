@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { once } from '@/function'
+import { once } from '../src'
 
 describe('function test', () => {
   it('once', () => {

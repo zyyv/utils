@@ -10,7 +10,6 @@ import { toTypeString } from '../shared/base'
  * @category Is
  */
 
-// @ts-expect-error
 export const isWindow = (v: any): boolean => typeof window !== 'undefined' && toTypeString(v) === '[object Window]'
 
 /**
@@ -21,7 +20,6 @@ export const isWindow = (v: any): boolean => typeof window !== 'undefined' && to
  * @category Is
  */
 
-// @ts-expect-error
 export const inBrowser = typeof window !== 'undefined'
 
 /**
@@ -32,7 +30,6 @@ export const inBrowser = typeof window !== 'undefined'
  * @category Is
  */
 
-// @ts-expect-error
 export const isWechatBrowser = (): boolean => (navigator?.userAgent.toLowerCase() as string).includes('micromessenger')
 
 /**
@@ -40,7 +37,6 @@ export const isWechatBrowser = (): boolean => (navigator?.userAgent.toLowerCase(
  *
  * @category Is
  */
-// @ts-expect-error
 export const UA = inBrowser && window.navigator.userAgent.toLowerCase()
 /**
  * isIE
@@ -78,6 +74,10 @@ export const isPhantomJS = UA && /phantomjs/.test(UA)
  * @category Is
  */
 export const isFF = UA && UA.match(/firefox\/(\d+)/)
+
+export const isElectron = inBrowser && (location.protocol === 'app:' || (process.env.NODE_ENV === 'development' && navigator.userAgent.includes('Electron')))
+export const isVSCode = inBrowser && location.protocol === 'vscode-webview:'
+export const isLocalMode = isElectron || isVSCode
 
 export default {
   isWindow,

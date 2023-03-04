@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest'
-import { formatNum, padZero } from '@/number'
+import { formatNum, padZero } from '../src'
 
 describe('test Number utils', () => {
   test('formatNum', () => {

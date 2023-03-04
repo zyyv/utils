@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { average, chunk, nest, range, shuffle, toArray } from '@/array'
+import { average, chunk, nest, range, shuffle, toArray } from '../src'
 import { nest as nestData } from './targets/array'
 
 describe('test Array utils', () => {
