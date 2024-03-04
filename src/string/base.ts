@@ -5,7 +5,7 @@ const urlAlphabet = 'useandom-26T198340PX75pxJACKVERYMINDBUSHWOLF_GQZbfghjklqvwy
  *
  * @category String
  */
-export function randomStr(size = 16, dict = urlAlphabet) {
+export function randomStr(size = 16, dict = urlAlphabet): string {
   let id = ''
   let i = size
   const len = dict.length

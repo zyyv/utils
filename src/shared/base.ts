@@ -7,7 +7,7 @@
  *
  * @category Shared
  */
-export const toTypeString = (v: any) => Object.prototype.toString.call(v)
+export const toTypeString: (v: any) => string = (v: any) => Object.prototype.toString.call(v)
 
 /**
  * Get random number
@@ -18,7 +18,7 @@ export const toTypeString = (v: any) => Object.prototype.toString.call(v)
  *
  * @category Shared
  */
-export const getRandom = (min: number, max: number) => Math.floor(Math.random() * max + min)
+export const getRandom: (min: number, max: number) => number = (min: number, max: number) => Math.floor(Math.random() * max + min)
 
 /**
  * Generate hash code
@@ -28,7 +28,7 @@ export const getRandom = (min: number, max: number) => Math.floor(Math.random() 
  *
  * @category Shared
  */
-export function hash(str: string) {
+export function hash(str: string): string {
   let i
   let l
   let hval = 0x811C9DC5

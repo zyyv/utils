@@ -59,7 +59,7 @@ export function last<T>(array: readonly T[]): T | undefined {
  * 从数组中移除一个元素
  * @category Array
  */
-export function remove<T>(array: T[], value: T) {
+export function remove<T>(array: T[], value: T): boolean {
   if (!array)
     return false
   const index = array.indexOf(value)
@@ -105,7 +105,7 @@ export function range(...args: any): number[] {
  *
  * @category Array
  */
-export function move<T>(arr: T[], from: number, to: number) {
+export function move<T>(arr: T[], from: number, to: number): T[] {
   arr.splice(to, 0, arr.splice(from, 1)[0])
   return arr
 }

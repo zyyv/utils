@@ -33,7 +33,7 @@ export function deepClone(origin: unknown): unknown {
  * @param hash hashMap
  * @returns a deep clone object
  */
-export function deepClone2(origin: any, hash = new WeakMap()): any {
+export function deepClone2(origin: any, hash: WeakMap<WeakKey, any> = new WeakMap()): any {
   if (isObject(origin)) {
     if (hash.has(origin))
       return hash.get(origin)

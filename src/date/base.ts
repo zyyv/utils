@@ -13,7 +13,7 @@ export const isLeapYear = (y: number) => (y % 4 === 0 && y % 100 !== 0) || y % 4
  * @returns Promise<void>
  * @category Date
  */
-export const sleep = (ms: number) => new Promise<void>(resolve => setTimeout(resolve, ms))
+export const sleep: (ms: number) => Promise<void> = (ms: number) => new Promise<void>(resolve => setTimeout(resolve, ms))
 
 /**
  * Format timestamp to string
@@ -26,7 +26,7 @@ export const sleep = (ms: number) => new Promise<void>(resolve => setTimeout(res
  *
  * @category Date
  */
-export function formatTimestamp(timestamp: number, format = 'yyyy-MM-dd hh:mm:ss') {
+export function formatTimestamp(timestamp: number, format = 'yyyy-MM-dd hh:mm:ss'): string {
   const date = new Date(timestamp)
   const year = date.getFullYear()
   const month = date.getMonth() + 1
@@ -51,7 +51,7 @@ export function formatTimestamp(timestamp: number, format = 'yyyy-MM-dd hh:mm:ss
  * @example
  * formatSeconds(3600) // 01:00:00
  */
-export function formatSeconds(value: number) {
+export function formatSeconds(value: number): string {
   const h = (value / 3600) >> 0
   const m = ((value % 3600) / 60) >> 0
   const s = ((value % 3600) % 60) >> 0

@@ -33,47 +33,41 @@ export const inBrowser = typeof window !== 'undefined'
 export const isWechatBrowser = (): boolean => (navigator?.userAgent.toLowerCase() as string).includes('micromessenger')
 
 /**
- * navigator.userAgent
- *
- * @category Is
- */
-export const UA = inBrowser && window.navigator.userAgent.toLowerCase()
-/**
  * isIE
  *
  * @category Is
  */
-export const isIE = UA && /msie|trident/.test(UA)
+export const isIE: (UA: string) => boolean = (UA: string) => /msie|trident/.test(UA)
 /**
  * isIE9
  *
  * @category Is
  */
-export const isIE9 = UA && UA.indexOf('msie 9.0') > 0
+export const isIE9: (UA: string) => boolean = (UA: string) => UA.indexOf('msie 9.0') > 0
 /**
  * isEdge
  *
  * @category Is
  */
-export const isEdge = UA && UA.indexOf('edge/') > 0
+export const isEdge: (UA: string) => boolean = (UA: string) => UA.indexOf('edge/') > 0
 /**
  * isChrome
  *
  * @category Is
  */
-export const isChrome = UA && /chrome\/\d+/.test(UA) && !isEdge
+export const isChrome: (UA: string) => boolean = (UA: string) => /chrome\/\d+/.test(UA) && !isEdge(UA)
 /**
  * isPhantomJS
  *
  * @category Is
  */
-export const isPhantomJS = UA && /phantomjs/.test(UA)
+export const isPhantomJS: (UA: string) => boolean = (UA: string) => /phantomjs/.test(UA)
 /**
  * isFF
  *
  * @category Is
  */
-export const isFF = UA && UA.match(/firefox\/(\d+)/)
+export const isFF: (UA: string) => boolean = (UA: string) => /firefox\/\d+/.test(UA)
 
 // export const isElectron = inBrowser && (location.protocol === 'app:' || (process.env.NODE_ENV === 'development' && navigator.userAgent.includes('Electron')))
 // export const isVSCode = inBrowser && location.protocol === 'vscode-webview:'
@@ -83,7 +77,6 @@ export default {
   isWindow,
   inBrowser,
   isWechatBrowser,
-  UA,
   isIE,
   isIE9,
   isEdge,
