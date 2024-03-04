@@ -1,0 +1,66 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`is 1`] = `
+[
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "id": 4,
+            "name": "三级节点1-1-1",
+            "parentId": 2,
+          },
+          {
+            "id": 5,
+            "name": "三级节点1-1-2",
+            "parentId": 2,
+          },
+        ],
+        "id": 2,
+        "name": "二级节点1-1",
+        "parentId": 1,
+      },
+      {
+        "children": [
+          {
+            "id": 6,
+            "name": "三级节点1-2-1",
+            "parentId": 3,
+          },
+        ],
+        "id": 3,
+        "name": "二级节点1-2",
+        "parentId": 1,
+      },
+    ],
+    "id": 1,
+    "name": "一级节点1",
+    "parentId": null,
+  },
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "id": 10,
+            "name": "三级节点2-1-1",
+            "parentId": 8,
+          },
+        ],
+        "id": 8,
+        "name": "二级节点2-1",
+        "parentId": 7,
+      },
+      {
+        "id": 9,
+        "name": "二级节点2-2",
+        "parentId": 7,
+      },
+    ],
+    "id": 7,
+    "name": "一级节点2",
+    "parentId": null,
+  },
+]
+`;

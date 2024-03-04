@@ -23,13 +23,15 @@ export const isString = (val: unknown): val is string => typeof val === 'string'
 /**
  * @category Is
  */
-export const isObject = (val: unknown): val is Record<any, any> =>
-  val !== null && typeof val === 'object'
+export function isObject(val: unknown): val is Record<any, any> {
+  return val !== null && typeof val === 'object'
+}
 /**
  * @category Is
  */
-export const isPlainObject = (val: unknown): val is object =>
-  toTypeString(val) === '[object Object]'
+export function isPlainObject(val: unknown): val is object {
+  return toTypeString(val) === '[object Object]'
+}
 /**
  * @category Is
  */
@@ -37,13 +39,15 @@ export const isArray = Array.isArray
 /**
  * @category Is
  */
-export const isMap = (val: unknown): val is Map<any, any> =>
-  toTypeString(val) === '[object Map]'
+export function isMap(val: unknown): val is Map<any, any> {
+  return toTypeString(val) === '[object Map]'
+}
 /**
  * @category Is
  */
-export const isSet = (val: unknown): val is Set<any> =>
-  toTypeString(val) === '[object Set]'
+export function isSet(val: unknown): val is Set<any> {
+  return toTypeString(val) === '[object Set]'
+}
 /**
  * @category Is
  */
@@ -67,7 +71,7 @@ export const isValue = (val: any): val is boolean => val !== undefined && val !=
 /**
  * @category Is
  */
-export const isEmpty = (val: any): val is boolean => {
+export function isEmpty(val: any): val is boolean {
   return (!val || val === null || val === undefined || (Array.isArray(val) && Object.keys(val).length <= 0))
 }
 

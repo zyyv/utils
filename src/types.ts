@@ -4,23 +4,23 @@
 export type Awaitable<T> = T | PromiseLike<T>
 
 /**
-  * Null or whatever
-  */
+ * Null or whatever
+ */
 export type Nullable<T> = T | null | undefined
 
 /**
-  * Array, or not yet
-  */
+ * Array, or not yet
+ */
 export type Arrayable<T> = T | Array<T>
 
 /**
-  * Function
-  */
+ * Function
+ */
 export type Fn<T = void> = () => T
 
 /**
-  * Constructor
-  */
+ * Constructor
+ */
 export type Constructor<T = void> = new (...args: any[]) => T
 
 export type DeepPartial<T> = { [P in keyof T]?: DeepPartial<T[P]> }
@@ -78,17 +78,17 @@ export declare class Emitter<Events extends EventsMap = DefaultEvents> {
   off<K extends keyof Events>(this: this, event: K, cb: Events[K]): void
 
   /**
-    * Add a one-time listener for a given event.
-    *
-    * ```js
-    * ee.once('tick', (tickType, tickDuration) => {
-    *   count += 1
-    * })
-    * ```
-    *
-    * @param event The event name.
-    * @param cb The listener function.
-    */
+   * Add a one-time listener for a given event.
+   *
+   * ```js
+   * ee.once('tick', (tickType, tickDuration) => {
+   *   count += 1
+   * })
+   * ```
+   *
+   * @param event The event name.
+   * @param cb The listener function.
+   */
   once<K extends keyof Events>(this: this, event: K, cb: Events[K]): void
 
   /**

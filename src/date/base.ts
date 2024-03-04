@@ -7,26 +7,26 @@
 export const isLeapYear = (y: number) => (y % 4 === 0 && y % 100 !== 0) || y % 400 === 0
 
 /**
-  * Easily sleep function
-  * 简单的延迟函数
-  * @param ms 毫秒数
-  * @returns Promise<void>
-  * @category Date
-  */
+ * Easily sleep function
+ * 简单的延迟函数
+ * @param ms 毫秒数
+ * @returns Promise<void>
+ * @category Date
+ */
 export const sleep = (ms: number) => new Promise<void>(resolve => setTimeout(resolve, ms))
 
 /**
-  * Format timestamp to string
-  * 格式化时间戳
-  * @param timestamp 时间戳
-  * @param format 格式化字符串
-  * @returns string
-  * @example
-  * formatTimestamp(1589788800000, 'YYYY-MM-DD HH:mm:ss') // 2020-01-01 00:00:00
-  *
-  * @category Date
-  */
-export const formatTimestamp = (timestamp: number, format = 'yyyy-MM-dd hh:mm:ss') => {
+ * Format timestamp to string
+ * 格式化时间戳
+ * @param timestamp 时间戳
+ * @param format 格式化字符串
+ * @returns string
+ * @example
+ * formatTimestamp(1589788800000, 'YYYY-MM-DD HH:mm:ss') // 2020-01-01 00:00:00
+ *
+ * @category Date
+ */
+export function formatTimestamp(timestamp: number, format = 'yyyy-MM-dd hh:mm:ss') {
   const date = new Date(timestamp)
   const year = date.getFullYear()
   const month = date.getMonth() + 1
@@ -44,14 +44,14 @@ export const formatTimestamp = (timestamp: number, format = 'yyyy-MM-dd hh:mm:ss
 }
 
 /**
-  * Format seconds to string
-  * @param value 秒数
-  * @returns string
-  * @category Date
-  * @example
-  * formatSeconds(3600) // 01:00:00
-  */
-export const formatSeconds = (value: number) => {
+ * Format seconds to string
+ * @param value 秒数
+ * @returns string
+ * @category Date
+ * @example
+ * formatSeconds(3600) // 01:00:00
+ */
+export function formatSeconds(value: number) {
   const h = (value / 3600) >> 0
   const m = ((value % 3600) / 60) >> 0
   const s = ((value % 3600) % 60) >> 0

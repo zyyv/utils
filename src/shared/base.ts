@@ -10,14 +10,14 @@
 export const toTypeString = (v: any) => Object.prototype.toString.call(v)
 
 /**
-  * Get random number
-  * 获取最大值最小值之间的随机数
-  * @param min number
-  * @param max number
-  * @returns number
-  *
-  * @category Shared
-  */
+ * Get random number
+ * 获取最大值最小值之间的随机数
+ * @param min number
+ * @param max number
+ * @returns number
+ *
+ * @category Shared
+ */
 export const getRandom = (min: number, max: number) => Math.floor(Math.random() * max + min)
 
 /**
@@ -29,7 +29,8 @@ export const getRandom = (min: number, max: number) => Math.floor(Math.random() 
  * @category Shared
  */
 export function hash(str: string) {
-  let i; let l
+  let i
+  let l
   let hval = 0x811C9DC5
 
   for (i = 0, l = str.length; i < l; i++) {

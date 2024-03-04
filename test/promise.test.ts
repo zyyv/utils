@@ -1,7 +1,7 @@
-import { describe, expect, test } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import { settleAllPromise } from '../src'
 
-describe('Promise', () => {
+describe('promise', () => {
   const createPs = () => [
     new Promise((resolve) => {
       resolve('1')
@@ -20,7 +20,7 @@ describe('Promise', () => {
     }),
   ]
 
-  test('settleAllPromise', async() => {
+  it('settleAllPromise', async () => {
     const ps = createPs()
 
     const { results, errors } = await settleAllPromise(ps)
@@ -28,7 +28,7 @@ describe('Promise', () => {
     expect(errors).toEqual([new Error('2'), new Error('3')])
   })
 
-  test('settleAllPromise errFn', async() => {
+  it('settleAllPromise errFn', async () => {
     const ps = createPs()
 
     const { results, errors } = await settleAllPromise(ps, (err: Error) => {

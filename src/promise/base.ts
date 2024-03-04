@@ -28,12 +28,14 @@ export async function settleAllPromise<T, V>(
 ): Promise<settleAllPromiseResult<T, V>>
 export async function settleAllPromise<T, V>(
   promises: readonly Promise<T>[],
-  errFn: (err: any, ind: number) => V = err => err): Promise<settleAllPromiseResult<T, V>> {
+  errFn: (err: any, ind: number) => V = err => err,
+): Promise<settleAllPromiseResult<T, V>> {
   const intermediateResults: { errors?: V, results?: T }[] = await Promise.all(
-    (promises || []).map(async(p, i) => {
+    (promises || []).map(async (p, i) => {
       try {
         return { results: await p }
-      } catch (err) {
+      }
+      catch (err) {
         return { errors: await errFn(err, i) }
       }
     }),

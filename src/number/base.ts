@@ -1,4 +1,3 @@
-
 /**
  * fotmat number
  * 格式化数字
@@ -36,14 +35,14 @@ export function padZero(num: number, len = 2): string {
 }
 
 /**
-  * turn to Number
-  * @param val
-  * @returns number
-  * @category Number
-  */
-export const toNumber = (val: any): number => {
-  const n = parseFloat(val)
-  return isNaN(n) ? val : n
+ * turn to Number
+ * @param val
+ * @returns number
+ * @category Number
+ */
+export function toNumber(val: any): number {
+  const n = Number.parseFloat(val)
+  return Number.isNaN(n) ? val : n
 }
 
 export default {

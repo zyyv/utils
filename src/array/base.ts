@@ -55,10 +55,10 @@ export function last<T>(array: readonly T[]): T | undefined {
 }
 
 /**
-   * Remove an item from Array
-   * 从数组中移除一个元素
-   * @category Array
-   */
+ * Remove an item from Array
+ * 从数组中移除一个元素
+ * @category Array
+ */
 export function remove<T>(array: T[], value: T) {
   if (!array)
     return false
@@ -84,7 +84,8 @@ export function range(...args: any): number[] {
     start = 0
     step = 1;
     ([stop] = args)
-  } else {
+  }
+  else {
     ([start, stop, step = 1] = args)
   }
 
@@ -112,9 +113,9 @@ export function move<T>(arr: T[], from: number, to: number) {
 /**
  * averaging
  * 求平均数
- * @param nums number[]
+ * @param nums number
  * @returns number
- * * @category Array
+ * @category Array
  */
 export function average(...arr: number[]): number {
   return arr.reduce((c, n) => c + n, 0) / arr.length

@@ -11,7 +11,8 @@ import type { DeepPartial } from '../types'
  * @returns a deep clone object
  */
 export function deepClone(origin: unknown): unknown {
-  if (isArray(origin)) return origin.map(child => deepClone(child))
+  if (isArray(origin))
+    return origin.map(child => deepClone(child))
 
   if (isObject(origin)) {
     return Object.fromEntries(
@@ -34,7 +35,8 @@ export function deepClone(origin: unknown): unknown {
  */
 export function deepClone2(origin: any, hash = new WeakMap()): any {
   if (isObject(origin)) {
-    if (hash.has(origin)) return hash.get(origin)
+    if (hash.has(origin))
+      return hash.get(origin)
 
     const target: any = isArray(origin) ? [] : {}
     hash.set(origin, target)
@@ -63,11 +65,9 @@ const hasOwnProperty = Object.prototype.hasOwnProperty
  * Object.prototype.hasOwnProperty
  * @category Object
  */
-export const hasOwn = (
-  val: object,
-  key: string | symbol,
-): key is keyof typeof val => {
-  if (val == null) return false
+export function hasOwn(val: object, key: string | symbol): key is keyof typeof val {
+  if (val == null)
+    return false
   return hasOwnProperty.call(val, key)
 }
 
@@ -96,7 +96,8 @@ export function deepMerge<T>(original: T, patch: DeepPartial<T>): T {
           Object.assign(output, { [key]: p[key] })
         else
           output[key] = deepMerge(o[key], p[key])
-      } else {
+      }
+      else {
         Object.assign(output, { [key]: p[key] })
       }
     })

@@ -3,7 +3,7 @@
  *
  * @category Function
  */
-export const noop = () => {}
+export function noop() {}
 
 /**
  * no 永远返回false
@@ -22,7 +22,7 @@ export const NO = () => false
  */
 export function once(fn: (...args: any) => void): Function {
   let called = false
-  return function(...args: any) {
+  return function (...args: any) {
     if (!called) {
       called = true
       return fn(...args)

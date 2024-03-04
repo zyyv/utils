@@ -36,7 +36,6 @@ export function createEvents<Events extends EventsMap = DefaultEvents>(): Emitte
     once(event, cb) {
       const unbind = this.on(event, ((...args: any[]) => {
         unbind()
-        // eslint-disable-next-line n/no-callback-literal
         cb(...args)
       }) as any)
     },

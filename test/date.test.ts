@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import { formatSeconds } from '../src'
 
 describe('date', () => {
@@ -9,7 +9,7 @@ describe('date', () => {
   //   expect(formatTimestamp(timestamp, 'yyyy-MM-dd')).toMatchInlineSnapshot('"2022-09-02"')
   // })
 
-  test('formatSeconds', () => {
+  it('formatSeconds', () => {
     expect(formatSeconds(60)).toMatchInlineSnapshot('"00:01:00"')
     expect(formatSeconds(120)).toMatchInlineSnapshot('"00:02:00"')
     expect(formatSeconds(58)).toMatchInlineSnapshot('"00:00:58"')

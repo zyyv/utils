@@ -1,8 +1,8 @@
-import { describe, expect, test } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import { deepClone, deepClone2, deepMerge } from '../src'
 
-describe('Object', () => {
-  test('deepClone', () => {
+describe('object', () => {
+  it('deepClone', () => {
     const fixtures = [
       {
         target: 'normal',
@@ -35,7 +35,7 @@ describe('Object', () => {
     })
   })
 
-  test('deepMerge', () => {
+  it('deepMerge', () => {
     const fixtureOrigin = {
       a: 1,
       b: {

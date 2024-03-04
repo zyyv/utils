@@ -75,9 +75,9 @@ export const isPhantomJS = UA && /phantomjs/.test(UA)
  */
 export const isFF = UA && UA.match(/firefox\/(\d+)/)
 
-export const isElectron = inBrowser && (location.protocol === 'app:' || (process.env.NODE_ENV === 'development' && navigator.userAgent.includes('Electron')))
-export const isVSCode = inBrowser && location.protocol === 'vscode-webview:'
-export const isLocalMode = isElectron || isVSCode
+// export const isElectron = inBrowser && (location.protocol === 'app:' || (process.env.NODE_ENV === 'development' && navigator.userAgent.includes('Electron')))
+// export const isVSCode = inBrowser && location.protocol === 'vscode-webview:'
+// export const isLocalMode = isElectron || isVSCode
 
 export default {
   isWindow,
